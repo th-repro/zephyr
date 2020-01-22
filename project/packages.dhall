@@ -4,7 +4,60 @@ let upstream =
 let overrides = {=}
 
 let additions =
-  { web-fetch =
+  { prettier-printer =
+      { dependencies =
+          [ "prelude"
+          , "console"
+          , "lists"
+          , "tuples"
+          , "quickcheck"
+          , "psci-support"
+          , "spec"
+          , "spec-discovery"
+          ]
+      , repo =
+          "https://github.com/paulyoung/purescript-prettier-printer.git"
+      , version =
+          "v2.0.1"
+      }
+
+  , versions =
+      { dependencies =
+          [ "prelude"
+          , "console"
+          , "either"
+          , "maybe"
+          , "integers"
+          , "strings"
+          , "lists"
+          , "functions"
+          , "foldable-traversable"
+          , "control"
+          , "parsing"
+          , "partial"
+          , "orders"
+          , "exceptions"
+          ]
+      , repo =
+          "https://github.com/hdgarrood/purescript-versions.git"
+      , version =
+          "v5.0.0"
+      }
+
+  , web-encoding =
+      { dependencies =
+          [ "prelude"
+          , "effect"
+          , "arraybuffer-types"
+          , "newtype"
+          ]
+      , repo =
+          "https://github.com/purescript-web/purescript-web-encoding.git"
+      , version =
+          "v1.0.0"
+      }
+
+  , web-fetch =
       { dependencies =
           [ "prelude"
           , "effect"
